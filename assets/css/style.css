@@ -1,0 +1,12 @@
+#pangram-status-container {
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 10px;
+    display: none;
+    background-color: lightcyan;
+}
+
+#missing-letters-container {
+    margin-top: 5px;
+}
