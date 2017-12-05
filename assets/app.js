@@ -3,7 +3,6 @@
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
 var characterMap = {};
 
-
 function initCharacterMap () {
     // init map of chars to track presence of each char in user input
     for(var i=0; i < alphabet.length; i++) {
@@ -12,10 +11,7 @@ function initCharacterMap () {
     }
 }
 
-function checkInput(event) {
-    // if(event && event.keyCode == 13) {
-    //     event.preventDefault();
-    // }
+function checkInput() {
     initCharacterMap();
     var missingLetters = [];
     // strip all non-alphabetic signs
@@ -35,7 +31,6 @@ function checkInput(event) {
     // @object/construct: characterMap
     // @params: key = letter, value = occurences (number)
     Object.keys(characterMap).forEach(function(key) {   
-        //console.log(key, characterMap[key]);
         if(characterMap[key] === 0) {
             missingLetters.push(key);   
         }
