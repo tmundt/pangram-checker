@@ -71,11 +71,18 @@ function checkInput(event) {
     }
 }
 
+function clearInput() {
+    document.getElementById('textual-input').value = '';
+    document.getElementById('textual-input').focus();
+    document.getElementById('pangram-status-container').style.display = 'none';
+}
+
 function isLetter(character) {
     return character.length === 1 && character.match(/[a-z]/i);
 }
 
 document.getElementById('submit-input-button').onclick = checkInput;
+document.getElementById('clear-button').onclick = clearInput;
 
 // Check keys to enable submit via ENTER key
 document.getElementById('textual-input').onkeyup = function(event) {
